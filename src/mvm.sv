@@ -99,7 +99,6 @@ for (i = 0; i < NUM_OLANES; i = i + 1) begin
 end
 endgenerate
 
-// TODO: Fill this in
 ctrl # (
     .VEC_ADDRW(VEC_ADDRW), .MAT_ADDRW(MAT_ADDRW)  
 ) ctrl_inst (
@@ -119,7 +118,6 @@ assign o_valid = o_valid_from_each_olane[0];
 genvar j;
 generate
     for (j = 0; j < NUM_OLANES; j = j + 1) begin : gen_lanes
-        // Base index starts at the top of the lane, then subtracts (OWIDTH - 1) bits
         assign o_result[(j*OWIDTH) +: OWIDTH] = o_result_parts[j];
     end
 endgenerate

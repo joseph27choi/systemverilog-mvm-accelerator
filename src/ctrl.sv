@@ -127,13 +127,6 @@ end
 
 
 always_comb begin: output_decoder
-    // r_next_vec_raddr = r_vec_raddr; 
-    // r_next_mat_raddr = r_mat_raddr; 
-    // r_next_accum_first = r_accum_first;
-    // r_next_accum_last = r_accum_last;
-    // r_next_busy = r_busy;
-    // r_next_ovalid = r_ovalid;
-
     case (state)
         IDLE: begin
             /* next_state is IDLE */

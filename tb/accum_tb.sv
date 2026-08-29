@@ -1,38 +1,7 @@
-// =============================================================================
-// accum_tb.sv  -  Self-checking unit testbench for the accum module (ECE 327 Lab 4)
-//
-// Verifies the accumulator described in the lab handout:
-//   - ivalid : input `data` is valid and should be accumulated
-//   - first  : start of a new accumulation (reset accum register to `data`)
-//   - last   : last input in the current accumulation (assert ovalid afterwards)
-//   - result : ACCUMW-wide accumulated sum
-//   - ovalid : asserted when `result` holds the final sum of an accumulation
-//
-// Methodology:
-//   * Inputs are driven on the negative clock edge so they are stable before
-//     the posedge at which the DUT samples them.
-//   * A reference model computes the expected sum of each accumulation group
-//     and pushes it into a scoreboard queue.
-//   * The checker watches for `ovalid` (sampled on negedge, after registered
-//     outputs have settled) and compares `result` against the queued expected
-//     value. Driving the check off `ovalid` makes it robust to whether the
-//     design asserts ovalid in the same cycle or one cycle after `last`.
-//
-// NOTE: This assumes the standard *registered* accumulator (recommended for
-//       meeting timing). If your accum uses a different output latency, the
-//       ovalid-driven checker still works as long as `result` is valid while
-//       `ovalid` is high.
-// =============================================================================
 `timescale 1ns / 1ps
 
 module accum_tb;
 
-  // ---------------------------------------------------------------------------
-  // Parameters  (adjust to match your instantiation if needed)
-  //   DATAW  = width of the input data (dot-product result width in the MVM)
-  //   ACCUMW = width of the internal accumulator / result
-  // Defaults chosen so that signed sign-extension (DATAW < ACCUMW) is exercised.
-  // ---------------------------------------------------------------------------
   localparam int DATAW      = 16;
   localparam int ACCUMW     = 32;
   localparam int CLK_PERIOD = 10;   // ns

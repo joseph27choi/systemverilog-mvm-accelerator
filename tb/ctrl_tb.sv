@@ -1,27 +1,3 @@
-// =============================================================================
-// ctrl_tb.sv  -  Self-checking unit testbench for the ctrl module (ECE 327 Lab 4)
-//
-// The controller is a 2-state FSM (IDLE / COMPUTE). On `start` it walks the
-// vector/matrix read addresses and accumulator control bits for the whole
-// operation. From the handout, with vec_start_addr=8, vec_num_words=4,
-// mat_start_addr=0, mat_num_rows_per_olane=2 the emitted sequence is:
-//
-//   vec_raddr= 8 mat_raddr=0 first=1 last=0 busy=1 ovalid=1
-//   vec_raddr= 9 mat_raddr=1 first=0 last=0 busy=1 ovalid=1
-//   vec_raddr=10 mat_raddr=2 first=0 last=0 busy=1 ovalid=1
-//   vec_raddr=11 mat_raddr=3 first=0 last=1 busy=1 ovalid=1
-//   vec_raddr= 8 mat_raddr=4 first=1 last=0 busy=1 ovalid=1
-//   vec_raddr= 9 mat_raddr=5 first=0 last=0 busy=1 ovalid=1
-//   vec_raddr=10 mat_raddr=6 first=0 last=0 busy=1 ovalid=1
-//   vec_raddr=11 mat_raddr=7 first=0 last=1 busy=1 ovalid=1
-//
-// Reference model (for r in 0..rows-1, w in 0..num_words-1):
-//   vec_raddr   = vec_start_addr + w                     (restarts each row)
-//   mat_raddr   = mat_start_addr + (r*num_words + w)     (continuous counter)
-//   accum_first = (w == 0)
-//   accum_last  = (w == num_words-1)
-//   ovalid/busy = 1                                      (during generation)
-// =============================================================================
 `timescale 1ns / 1ps
 
 module ctrl_tb;
@@ -31,8 +7,8 @@ module ctrl_tb;
   // ---------------------------------------------------------------------------
   localparam int VEC_ADDRW  = 8;
   localparam int MAT_ADDRW  = 12;
-  localparam int VEC_SIZEW  = VEC_ADDRW + 1;  // Match ctrl.sv default (9 bits, holds up to 511)
-  localparam int MAT_SIZEW  = MAT_ADDRW + 1;  // Match ctrl.sv default (13 bits)
+  localparam int VEC_SIZEW  = VEC_ADDRW + 1;
+  localparam int MAT_SIZEW  = MAT_ADDRW + 1;
   localparam int CLK_PERIOD = 10;
 
   // ---------------------------------------------------------------------------
