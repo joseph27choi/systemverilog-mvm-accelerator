@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ctrl_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="ctrl_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="973.541 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,005.292 ns"></ZoomEndTime>
+      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="120"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/ctrl_tb/dut/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ctrl_tb/dut/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ctrl_tb/dut/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ctrl_tb/dut/v" type="array">
+      <obj_property name="ElementShortName">v[5:0]</obj_property>
+      <obj_property name="ObjectShortName">v[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ctrl_tb/dut/m" type="array">
+      <obj_property name="ElementShortName">m[7:0]</obj_property>
+      <obj_property name="ObjectShortName">m[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ctrl_tb/dut/next_v" type="array">
+      <obj_property name="ElementShortName">next_v[5:0]</obj_property>
+      <obj_property name="ObjectShortName">next_v[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ctrl_tb/dut/next_m" type="array">
+      <obj_property name="ElementShortName">next_m[7:0]</obj_property>
+      <obj_property name="ObjectShortName">next_m[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ctrl_tb/dut/state" type="array">
+      <obj_property name="ElementShortName">state[31:0]</obj_property>
+      <obj_property name="ObjectShortName">state[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="group377" type="group">
+      <obj_property name="label">OUTPUTS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/ctrl_tb/dut/r_vec_raddr" type="array">
+         <obj_property name="ElementShortName">r_vec_raddr[7:0]</obj_property>
+         <obj_property name="ObjectShortName">r_vec_raddr[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ctrl_tb/dut/r_mat_raddr" type="array">
+         <obj_property name="ElementShortName">r_mat_raddr[11:0]</obj_property>
+         <obj_property name="ObjectShortName">r_mat_raddr[11:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ctrl_tb/dut/r_accum_first" type="logic">
+         <obj_property name="ElementShortName">r_accum_first</obj_property>
+         <obj_property name="ObjectShortName">r_accum_first</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ctrl_tb/dut/r_accum_last" type="logic">
+         <obj_property name="ElementShortName">r_accum_last</obj_property>
+         <obj_property name="ObjectShortName">r_accum_last</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ctrl_tb/dut/r_busy" type="logic">
+         <obj_property name="ElementShortName">r_busy</obj_property>
+         <obj_property name="ObjectShortName">r_busy</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ctrl_tb/dut/r_ovalid" type="logic">
+         <obj_property name="ElementShortName">r_ovalid</obj_property>
+         <obj_property name="ObjectShortName">r_ovalid</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group379" type="group">
+      <obj_property name="label">NEXTS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/ctrl_tb/dut/next_state" type="array">
+         <obj_property name="ElementShortName">next_state[31:0]</obj_property>
+         <obj_property name="ObjectShortName">next_state[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ctrl_tb/dut/r_next_vec_raddr" type="array">
+         <obj_property name="ElementShortName">r_next_vec_raddr[7:0]</obj_property>
+         <obj_property name="ObjectShortName">r_next_vec_raddr[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ctrl_tb/dut/r_next_mat_raddr" type="array">
+         <obj_property name="ElementShortName">r_next_mat_raddr[11:0]</obj_property>
+         <obj_property name="ObjectShortName">r_next_mat_raddr[11:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ctrl_tb/dut/r_next_accum_first" type="logic">
+         <obj_property name="ElementShortName">r_next_accum_first</obj_property>
+         <obj_property name="ObjectShortName">r_next_accum_first</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ctrl_tb/dut/r_next_accum_last" type="logic">
+         <obj_property name="ElementShortName">r_next_accum_last</obj_property>
+         <obj_property name="ObjectShortName">r_next_accum_last</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ctrl_tb/dut/r_next_ovalid" type="logic">
+         <obj_property name="ElementShortName">r_next_ovalid</obj_property>
+         <obj_property name="ObjectShortName">r_next_ovalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ctrl_tb/dut/r_next_busy" type="logic">
+         <obj_property name="ElementShortName">r_next_busy</obj_property>
+         <obj_property name="ObjectShortName">r_next_busy</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group376" type="group">
+      <obj_property name="label">INPUTS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/ctrl_tb/dut/vec_start_addr" type="array">
+         <obj_property name="ElementShortName">vec_start_addr[7:0]</obj_property>
+         <obj_property name="ObjectShortName">vec_start_addr[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ctrl_tb/dut/vec_num_words" type="array">
+         <obj_property name="ElementShortName">vec_num_words[5:0]</obj_property>
+         <obj_property name="ObjectShortName">vec_num_words[5:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ctrl_tb/dut/mat_start_addr" type="array">
+         <obj_property name="ElementShortName">mat_start_addr[11:0]</obj_property>
+         <obj_property name="ObjectShortName">mat_start_addr[11:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ctrl_tb/dut/mat_num_rows_per_olane" type="array">
+         <obj_property name="ElementShortName">mat_num_rows_per_olane[7:0]</obj_property>
+         <obj_property name="ObjectShortName">mat_num_rows_per_olane[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ctrl_tb/dut/r_vec_start_addr" type="array">
+         <obj_property name="ElementShortName">r_vec_start_addr[7:0]</obj_property>
+         <obj_property name="ObjectShortName">r_vec_start_addr[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ctrl_tb/dut/r_vec_num_words" type="array">
+         <obj_property name="ElementShortName">r_vec_num_words[5:0]</obj_property>
+         <obj_property name="ObjectShortName">r_vec_num_words[5:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ctrl_tb/dut/r_mat_start_addr" type="array">
+         <obj_property name="ElementShortName">r_mat_start_addr[11:0]</obj_property>
+         <obj_property name="ObjectShortName">r_mat_start_addr[11:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ctrl_tb/dut/r_mat_num_rows_per_olane" type="array">
+         <obj_property name="ElementShortName">r_mat_num_rows_per_olane[7:0]</obj_property>
+         <obj_property name="ObjectShortName">r_mat_num_rows_per_olane[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/ctrl_tb/dut/VEC_ADDRW" type="array">
+      <obj_property name="ElementShortName">VEC_ADDRW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">VEC_ADDRW[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ctrl_tb/dut/MAT_ADDRW" type="array">
+      <obj_property name="ElementShortName">MAT_ADDRW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MAT_ADDRW[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ctrl_tb/dut/VEC_SIZEW" type="array">
+      <obj_property name="ElementShortName">VEC_SIZEW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">VEC_SIZEW[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ctrl_tb/dut/MAT_SIZEW" type="array">
+      <obj_property name="ElementShortName">MAT_SIZEW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MAT_SIZEW[31:0]</obj_property>
+   </wvobject>
+</wave_config>
